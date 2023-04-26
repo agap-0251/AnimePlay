@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-btns {
+    background: none;
+    border: none;
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(68, 183, 83);
+    padding: 3px 4px;
+    border-radius: 0.4rem;
+}
+
+.donate,.login {
+    margin: 0 1rem;
+}
+
+.sign-in-up {
+    height: 1.9rem;
+}
+
+.web-icon {
+    width: 2.8rem;
+    height: 2.8rem;
+    margin-right: 10px;
+    border-radius: 1rem
+}
+
+.log-sign-btn {
+    margin: 0 0.7rem;
+}
+
+.add {
+    margin-right: 0.3rem;
+    display: flex;
+    align-items: center;
+}
+
+.slide img{   
+    height: 23rem;
+    width: 25rem;
+    border-radius: 50%;
+    padding: 1rem;
+    z-index: 1;
+}
+
+.top-anime-header, .upcoming-anime-header {
+    color: white;
+    margin-top: 1rem;
+}
+
+.top-anime-header h1, .upcoming-anime-header h1 {
+    margin-left: 1rem;
+}
+
+.slide {
+    justify-content: space-between;
+    /* border: 2px solid hotpink; */
+}
+
+.airing-anime-synopsis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    line-height: 1.5rem;
+}
+
+.collapse-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.airing-anime-synopsis h3, .spotlight, .top-anime-header h1, .upcoming-anime-header h1 {
+    color: rgb(68, 183, 83);
+}
+
+.show-top-nav {
+    z-index: 3;
+    color: black;
+}
+
+
+
+.slider-wrapper {
+    height: 30rem;
+    color: white;
+    z-index: 1;
+    /* margin-top: -4.5rem; */
+    /* border: 2px solid teal; */
+}
+
+@media screen and (max-width: 814px) {
+    :root {--swiper-navigation-size: 2rem;}
+    .slide img {
+        width: 20rem;
+        height: 18rem;
+    }
+
+    .slider-wrapper {
+        margin-top: 0.11rem;
+        height: 21rem;
+    }   
+
+}
+
+@media screen and (max-width: 767px) {
+    :root {--swiper-navigation-size: 1.8rem;}
+    .collapse-nav {
+        display: flex;
+    }
+
+    .name {
+        height: 100%;
+    }
+
+    .slider-wrapper {
+        margin-top: 0.11rem;
+        height: 22rem;
+    }
+    .slide {
+        height: 22rem;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .collapse-nav, .name {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .nav-btns {
+        width: 100%;
+        background-color: rgb(68, 183, 83);
+        margin: 0.1rem 0;
+        border-radius: 0;
+        color: white;
+        margin-left: -0.1rem;
+    }
+    .nav-btns:hover {
+        opacity: 0.8;
+    }
+    
+}
+
+
+@media screen and (max-width: 540px) {
+    :root {--swiper-navigation-size: 1.5rem;}
+    .slide img {
+        width: 16rem;
+        height: 14rem;
+    }
+
+    .slider-wrapper {
+        margin-top: 0.11rem;
+        height: 100%;
+        max-height: 18rem;
+    }
+
+    .slide {
+        max-height: 18rem;
+    }
+
+    .slide-left p {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 497px) {
+    :root {--swiper-navigation-size: 1.4rem;}
+    .slider-header{
+        font-size: 1.2rem;
+    }
+
+    .slider-wrapper {
+        margin-top: 0.1rem;
+        height: 100%;
+        min-height: 12rem;
+        max-height: 16.8rem;
+    }
+    .slide {
+        min-height: 12rem;
+    }
+
+   .airing-anime-synopsis h5 {
+    font-size: 1.1rem;
+   }
+   .small-syn-text {
+    line-height: 1.2rem;
+   }    
+
+}
+
+@media screen and (max-width: 420px) {
+    :root {--swiper-navigation-size: 1.1rem;}
+    .slider-header{
+        font-size: 0.8rem;
+    }
+   .airing-anime-synopsis h5 {
+     font-size: 0.7rem;
+   }
+   .small-syn-text {
+    font-size: 0.47rem;
+    line-height: 1rem;
+   } 
+
+   .slider-wrapper {
+    margin-top: 0.1rem;
+    height: 100%;
+    min-height: 14rem;
+    max-height: 16.8rem;
+}
+
+   .slide img {
+    width: 14rem;
+    height: 14rem;
+}
+
+.slide-right p {
+    font-size: 0.4rem;
+    margin-right:10px;
+ }
+}
+
+@media screen and (max-width: 350px) {
+    
+    :root {--swiper-navigation-size: 1rem;}
+
+    .slider-wrapper {
+        margin-top: 0;
+    }
+
+    .slider-header{
+        font-size: 0.5rem;
+        font-weight: bold;
+    }
+    .airing-anime-synopsis h5 {
+        font-size: 0.4rem;
+    }
+    .small-syn-text {
+        font-size: 0.3rem;
+        line-height: 0.8rem;
+    } 
+    .slide-right p {
+        font-size: 0.3rem;
+        margin-right:10px;
+    }
+}
+
+

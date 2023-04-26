@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.blurImage {
+    width: 100%;
+    height: 20rem;
+}
+
+.detail-container {
+    min-height: 30rem;
+    background: linear-gradient(to bottom right,#000,rgb(37, 149, 126),#0606b5);
+    background-size: 400% 400%; 
+    animation: gradient 15s ease infinite; 
+    padding: 1rem;
+}
+
+.top-anime-container {
+    display: flex;
+    overflow-x: auto;
+    align-items: center;
+    gap: 0.3rem;
+    justify-content: flex-start;
+}
+
+.detail-card {
+    width: 12rem;
+    height: 9rem;
+    background: none;
+
+}
+
+.group-btn {
+    border: none;
+    padding: 0.5rem 1.4rem;
+    border-radius: 1rem;
+    margin: 0 0.4rem;
+    background: rgb(68, 183, 83);
+}
+
+.button-group {
+    gap: 2rem;
+}
+
+.share-btn {
+    height: 3rem;
+    width: 100%;
+    border-left: 2px solid rgb(68, 183, 83);
+    padding-left: 10px;
+}
+
+.web-name {
+    color: rgb(68, 183, 83);
+}
+
+
+.share-btn button{
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.share-btn p {
+    margin-top: 10px;
+
+}
+
+.share-btn button:hover {
+    margin-top: -10px;
+}
+
+.btn1 {
+    color: rgb(231, 50, 198);
+ }
+
+.btn2 {
+   color: blue;
+}
+
+.btn3 {
+    color: red;
+ }
+
+ .btn4 {
+    color: rgb(17, 156, 236)
+ }
+
+.manga-btn {
+    background: rgb(68, 183, 83);
+    border: none;
+    padding: 4px 8px;
+    margin-top: 0.5rem;
+}
+
+.gradient-header {
+    background: -webkit-linear-gradient(rgb(44, 198, 85),rgba(221, 224, 30));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    background-size: 100% 100%; 
+    transition: gradient 15s ease infinite;
+}
+
+.small-text {
+    font-size: 12px;
+}
+
+.gradient-text,.character-container h1 {
+    background: -webkit-linear-gradient(hotpink,teal);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    background-size: 100% 100%; 
+    transition: gradient 2s ease infinite;
+    font-size: 4rem;
+}
+
+.add1 {
+    margin-right: 0.3rem;
+}
+
+.anime-desc {
+    border-left: 1px solid white;
+    padding-left: 10px;
+    height: 19.4rem;
+}
+
+.card-detail-wrapper {
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: end;
+    justify-content: space-evenly;
+}
+
+.trailer {
+    background: linear-gradient(to bottom right,white,black,white,#333);
+    background-size: 400% 400%; 
+    animation: gradient 15s ease infinite; 
+    min-height: 14rem;
+   
+}
+
+.anime-characters {
+   /* border: 2px solid teal; */
+}
+
+.char-img-name-wrapper {
+    /* border: 2px solid hotpink; */
+    margin: 0 0.2rem;
+}
+
+.char-img-name-wrapper img{
+    width: 12rem;
+    height: 15rem;
+    border-radius: 50%;
+}
+
+.char-name {
+    color: rgb(68, 183, 83);
+}
+
+@keyframes gradient
+ {
+    0% {
+		background-position: 0% 50%;
+	}
+
+    25% {
+		background-position: 25% 75%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+    75% {
+		background-position: 70% 25%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@media screen and (max-width: 763px) {
+    .card-detail-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: 1fr 1fr;
+        
+    }
+    .button-group {
+        height: 100%;
+        place-content: center;
+        place-self: center;
+        background: none;
+        
+    }
+    .detail-card{
+        height: 100%;
+        place-content: center;
+    }
+    .anime-desc {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .anime-desc h6 {
+        font-size: 1.5rem;
+    }
+}

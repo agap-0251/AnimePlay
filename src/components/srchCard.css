@@ -1,0 +1,166 @@
+
+.card-wrapper {
+    /* background: linear-gradient(to bottom right,hotpink,pink,teal); */
+    width: 100%;
+    max-width: 12.9rem;
+    min-width: 12.9rem;
+    height: 100%;
+    background: none;
+
+}
+
+.link-style {
+    max-height: 19rem;
+    margin-bottom: 3px;
+}
+
+.card-wrapper img {
+    margin: 0;
+    height: 100%;
+    max-height: 19rem;
+    min-height: 19rem;
+    max-width: 12.9rem;
+    min-width: 12.9rem;
+    
+    
+}
+
+.card-content {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    max-width: 12.9rem;
+    min-width: 12.9rem;
+}
+
+.card-content:hover {
+    
+    opacity: 0.7;
+    background: linear-gradient(to right, #000,#333);
+    /* filter: opacity(0.7); */
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .card-wrapper {
+        max-width: 20rem;
+    }
+
+    .card-wrapper img,.link-style {
+        min-height: 18.2rem;
+        max-height: 18.2rem;
+        max-width: 14.5rem;
+        min-width: 14.5rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .card-wrapper img,.link-style {
+        min-height: 18.2rem;
+        max-height: 18.2rem;
+        max-width: 14.5rem;
+        min-width: 14.5rem;
+    }
+}
+
+@media screen and (max-width: 614px) {
+
+    .card-wrapper img,.link-style {
+        min-height: 18rem;
+        max-height: 18rem;
+        max-width: 14rem;
+        min-width: 14rem;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .card-wrapper img,.link-style {
+        min-height: 18rem;
+        max-height: 18rem;
+        max-width: 13.2rem;
+        min-width: 13.2rem;
+    }
+}
+
+@media screen and (max-width: 508px) {
+    .card-wrapper img,.link-style {
+        min-height: 18rem;
+        max-height: 18rem;
+        max-width: 12.5rem;
+        min-width: 12.5rem;
+    }
+}
+
+@media screen and (max-width: 469px) {
+    .card-wrapper img,.link-style {
+        min-height: 14rem;
+        max-height: 14rem;
+        max-width: 11.3rem;
+        min-width: 11.3rem;
+    }
+    
+.card-content {
+    max-width: 100%;
+    min-width: 100%;
+    visibility: hidden;
+}
+}
+
+@media screen and (max-width: 442px) {
+    .srch-card-header{
+        font-size: 0.8rem;
+    }
+    .rank-score {
+        font-size: 0.7rem ;
+    }
+}
+
+@media screen and (max-width: 427px) {
+    .card-wrapper img,.link-style {
+        min-height: 10.8rem;
+        max-height: 10.8rem;
+        max-width: 9.5rem;
+        min-width: 9.5rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+
+    .card-wrapper img,.link-style {
+        min-height: 10rem;
+        max-height: 10rem;
+        max-width: 8.8rem;
+        min-width: 8.8rem;
+    }
+}
+
+@media screen and (max-width: 351px) {
+
+    .card-wrapper img,.link-style {
+        min-height: 10rem;
+        max-height: 10rem;
+        max-width: 8.3rem;
+        min-width: 8.3rem;
+    }
+}
+
+@media screen and (max-width: 331px) {
+  
+    .card-wrapper img,.link-style {
+        min-height: 10rem;
+        max-height: 10rem;
+        max-width: 7.8rem;
+        min-width: 7.8rem;
+    }
+    
+}
+
+@media screen and (max-width: 314px) {
+    .card-wrapper img,.link-style {
+        min-height: 10rem;
+        max-height: 10rem;
+        max-width: 7.1rem;
+        min-width: 7.1rem;
+    }
+}
