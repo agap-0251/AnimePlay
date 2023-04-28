@@ -134,6 +134,7 @@ const ButtonGroup = ({ id,list,users }) => {
       </div>
       <div className="share-btn d-flex gap-2 align-items-center">
         <p className="fw-bold">Share with your friends </p>
+        <div className="d-flex social-btns">
         <button className="btn1">
           <FaInstagram />
         </button>
@@ -146,6 +147,8 @@ const ButtonGroup = ({ id,list,users }) => {
         <button className="btn4">
           <FaTelegram />
         </button>
+        </div>
+        
       </div>
     </div>
   );
