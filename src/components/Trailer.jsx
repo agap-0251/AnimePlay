@@ -1,4 +1,4 @@
-
+import "./detailPageSty.css"
 const Trailer = ({data}) => {
 
     return (

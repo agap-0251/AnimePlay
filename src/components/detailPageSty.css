@@ -212,7 +212,7 @@ body {
     .card-detail-wrapper {
         display: grid;
         grid-template-columns: 1fr 5fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1f;
         
     }
     .button-group {
@@ -253,6 +253,9 @@ body {
         font-size: 0.8rem;
         font-weight: bold;
     }
+    .character-container h1,.trailer h1 {
+        font-size: 3rem;
+    }
     
 }
 
@@ -264,6 +267,35 @@ body {
     }
     .group-btn {
         margin-bottom: 0.3rem;
+    }
+    .character-container h1,.trailer h1 {
+        font-size: 2.4rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .card-detail-wrapper {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: space-between;
+    }
+
+    .anime-desc {
+        width: 100%;
+    }
+
+    .share-btn {
+        margin: 0 0 3rem 0;
+    }
+    .group-btn {
+        margin-top: 0.7rem;
+        margin-bottom: -0.7rem;
+    }
+    .watch-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 }
 
