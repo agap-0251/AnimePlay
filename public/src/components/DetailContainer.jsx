@@ -162,7 +162,6 @@ const DetailContainer = ({ data }) => {
   useEffect(()=>{
     if(users != '') {
       const list = getWatchList(users);
-      
       setLocalList([...list])
     }
     

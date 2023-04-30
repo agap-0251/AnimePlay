@@ -1,6 +1,7 @@
 import { getDataById } from "./api";
 
 const getWatchList = (name) => {
+  console.log("in")
   const {array} = JSON.parse(localStorage.getItem(name));
   if (array.length === 0) {
     return [];
