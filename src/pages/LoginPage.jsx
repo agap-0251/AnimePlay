@@ -38,7 +38,7 @@ const LoginPage = () => {
             onChange={(e) => setUname(e.target.value)}
           />
           <small id="UsernameHelp" className="form-text text-muted">
-            We'll never share your email with anyone else.
+            New account will be created if the details are not found.
           </small>
         </div>
         <div className="form-group">

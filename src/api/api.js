@@ -42,6 +42,12 @@ const getDataById = async(id) => {
     return apidataById;
 }
 
+const getAnimeReviews = async(id) => {
+    const res = await axios.get(`https://api.jikan.moe/v4/anime/${id}/reviews`)
+    const apidataById = res.data;
+    return apidataById;
+}
+
 export {getDataById}
 
 export {getAnimeCharacters}
@@ -53,5 +59,6 @@ export {getUpcomingAnime}
 export {getRandomData}
 
 export {getAnimeAiringNow}
+export {getAnimeReviews}
 
 export {getData}

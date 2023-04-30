@@ -1,5 +1,5 @@
 import { useEffect, useState,useRef } from "react";
-import { getData } from "../api/api";
+import {  getData } from "../api/api";
 import  AniGridContainer from "./AniGridContainer"
 import "./homepage.css"
 import { register } from 'swiper/element/bundle';
@@ -13,6 +13,7 @@ const [info, setInfo] = useState([]);
         async function getDetails() {
             const res = await getData();
             setInfo(res.data)
+           
         }
         getDetails();
         return (

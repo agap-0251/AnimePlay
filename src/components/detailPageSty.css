@@ -1,3 +1,5 @@
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Recursive&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -177,6 +179,33 @@ body {
     margin: 0 0.2rem;
 }
 
+.trailer-container {
+    width: 100%;
+    /* border: 2px solid hotpink; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+
+.studios h1{ 
+    width: 100%;
+    height: 100%;
+}
+
+.studios-name {
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Recursive', sans-serif;
+    font-size: 5.5rem;
+    background: -webkit-linear-gradient(rgb(0, 115, 255),hotpink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    background-size: 100% 100%; 
+    transition: gradient 15s ease infinite;
+    display: flex;
+    
+}
+
 @keyframes gradient
  {
     0% {
@@ -204,6 +233,25 @@ body {
     .char-img-name-wrapper img{
         width: 8rem;
         height: 10rem;
+    }
+    
+}
+
+@media screen and (max-width: 1016px) {
+    .frame {
+        width: 550px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 928px) {
+    .trailer-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .frame {
+        width: 100%;
+        aspect-ratio: 7/5;
     }
 }
 
@@ -271,6 +319,7 @@ body {
     .character-container h1,.trailer h1 {
         font-size: 2.4rem;
     }
+
 }
 
 @media screen and (max-width: 500px) {
@@ -297,5 +346,13 @@ body {
         flex-direction: row;
         align-items: center;
     }
+    .studios-name {
+        font-size: 2.5rem;
+        padding-left: 2rem;
+    }
+    .studios {
+        width: 100%;
+    }
 }
+
 

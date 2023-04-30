@@ -64,6 +64,7 @@ const removeFromList = (name, data) => {
   localStorage.setItem(name, JSON.stringify({ pass: pass, array: [...updatedArray] }));
 };
 
+
 export { getWatchList };
 export { removeWatchItem };
 export { addedTo };

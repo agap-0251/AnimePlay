@@ -13,6 +13,7 @@ import { setWatchId,removeWatchItem } from "../api/userInfo";
 import { useNavigate } from "react-router-dom";
 import { UsersInfo } from "../pages/AnimeDetailPage";
 import { add } from "lodash";
+import { getAnimeReviews } from "../api/api";
 
 const DetailCard = ({ cardDetails }) => {
   return (
@@ -161,11 +162,11 @@ const DetailContainer = ({ data }) => {
   useEffect(()=>{
     if(users != '') {
       const list = getWatchList(users);
+      
       setLocalList([...list])
     }
     
   },[])
-
 
   return (
     <div className="detail-container container-fluid d-flex flex-column justify-items-around">
