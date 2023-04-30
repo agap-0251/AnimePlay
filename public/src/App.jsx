@@ -15,10 +15,12 @@ function App({}) {
 
  useEffect(()=>{
   (userInfo != 'undefined') && setUserInfo(JSON.parse(localStorage.getItem("currentUser")))
+   
  },[])
   
  useEffect(()=>{
   localStorage.setItem("currentUser",JSON.stringify(userInfo))
+   (userInfo == null || userInfo == "undefined") && setUserInfo(JSON.parse(localStorage.setItem("currentInfo",JSON.stringify(""))));
  },[userInfo])
 
  return (
