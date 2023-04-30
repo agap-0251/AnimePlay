@@ -14,7 +14,7 @@ function App({}) {
   const [userInfo,setUserInfo] = useState('')
 
  useEffect(()=>{
-  (userInfo === 'undefined') && setUserInfo(JSON.parse(localStorage.getItem("currentUser")))
+  (userInfo != 'undefined') && setUserInfo(JSON.parse(localStorage.getItem("currentUser")))
    
  },[])
   
