@@ -1,7 +1,5 @@
-import { getDataById } from "./api";
 
 const getWatchList = (name) => {
-  console.log("in")
   const {array} = JSON.parse(localStorage.getItem(name));
   if (array.length === 0) {
     return [];
@@ -12,8 +10,6 @@ const getWatchList = (name) => {
 
 const addedTo = (data) => {
   const localList = getWatchList();
-  console.log(data);
-  console.log(localList.some((item) => item.mal_id === data.mal_id));
   return localList.some((item) => item.mal_id === data.mal_id);
 };
 

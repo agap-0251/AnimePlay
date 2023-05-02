@@ -1,6 +1,5 @@
 
 .card-wrapper {
-    /* background: linear-gradient(to bottom right,hotpink,pink,teal); */
     width: 100%;
     max-width: 12.9rem;
     min-width: 12.9rem;
@@ -36,7 +35,6 @@
     
     opacity: 0.7;
     background: linear-gradient(to right, #000,#333);
-    /* filter: opacity(0.7); */
     cursor: pointer;
 }
 

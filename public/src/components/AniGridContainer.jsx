@@ -10,10 +10,8 @@ const AniGridContainer = ({ data }) => {
   const [noOfSlides, setNoOfSlides] = useState(7);
 
   useEffect(() => {
-    // listen for Swiper events using addEventListener
     swiperElRef.current.addEventListener("progress", (e) => {
       const [swiper, progress] = e.detail;
-      //   console.log(progress);
     });
 
     swiperElRef.current.addEventListener("slidechange", (e) => {});
@@ -21,8 +19,6 @@ const AniGridContainer = ({ data }) => {
       let winWidth = window.innerWidth;
 
       if (winWidth <= 372) setNoOfSlides(1);
-      // else if (winWidth <= 351) setNoOfSlides(2);
-      // else if (winWidth <= 521) setNoOfSlides(3);
       else if (winWidth <= 704) setNoOfSlides(2);
       else if (winWidth <= 767) setNoOfSlides(3);
       else if (winWidth <= 840) setNoOfSlides(3);

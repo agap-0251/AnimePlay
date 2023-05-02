@@ -1,15 +1,13 @@
-import { Link, useLocation} from "react-router-dom"
-import { useCallback, useEffect, useState } from "react";
+import { Link} from "react-router-dom"
+import { useCallback,useState } from "react";
 import { getAnimeBySearch } from "../api/api";
 import SrchCard from "../components/SrchCard";
 import "../components/srchPage.css"
 import "../components/homepage.css"
-import Footer from "../components/Footer";
 import { debounce } from "lodash";
 
 
 const SrchListContainer = ({arr}) => {
-    // console.log(arr)
     if(arr?.length === 0)
         return <h1 style={{color: "white"}}>Sorry no results are found ...</h1>
     return (
@@ -23,17 +21,6 @@ const SearchResultPage = () => {
     const [srchList, setSrchList] = useState()
     const [srchValue, setSrchValue] = useState("")
     const [isLoading, setIsLoading] = useState(true)
-    // useEffect(()=> {
-    //     async function getDetails() {
-    //         if(location.state.data) {
-    //             const res = await getAnimeBySearch(location.state.data);
-    //             setSrchList([...res.data])
-    //         }
-            
-    //     }
-
-    //     getDetails();
-    // },[])
 
      async function getDetails(val){
       setIsLoading(true)
@@ -47,7 +34,6 @@ const SearchResultPage = () => {
     const debouncedFunc = useCallback(debounce(val => getDetails(val),350),[])
   
     function handleChange(e) {
-      // console.log(e.target.value)
         setSrchValue(e.target.value);
          debouncedFunc(e.target.value)     
     }

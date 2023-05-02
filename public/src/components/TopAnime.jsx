@@ -1,4 +1,4 @@
-import { useEffect, useState,useRef } from "react";
+import { useEffect, useState } from "react";
 import {  getData } from "../api/api";
 import  AniGridContainer from "./AniGridContainer"
 import "./homepage.css"

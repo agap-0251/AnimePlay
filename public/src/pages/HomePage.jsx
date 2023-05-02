@@ -1,9 +1,7 @@
 import TopAnime from "../components/TopAnime";
-import NavBar from "../components/NavBar";
 import Slider from "../components/Slider";
 import Upcoming from "../components/Upcoming";
-import Footer from "../components/Footer";
-import { createContext,useContext,useEffect } from "react";
+import { createContext,useContext } from "react";
 import { UsersProvider } from "../App";
 
 const UsersInfo = createContext()

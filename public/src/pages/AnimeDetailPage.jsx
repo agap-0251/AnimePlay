@@ -6,7 +6,6 @@ import DetailContainer from "../components/DetailContainer";
 import Trailer from "../components/Trailer"
 import {useParams, Link} from "react-router-dom"
 import AnimeCharacters from "../components/AnimeCharacters";
-import Footer from "../components/Footer";
 import { UsersProvider } from "../App";
 
 export const UsersInfo = createContext();
@@ -43,15 +42,6 @@ const AnimeDetailPage = () => {
   return (
     <div className="text-white">
         <div className="container-fluid">
-        {/* <nav className="navbar navbar-expand-md show-top-nav navbar-dark">
-            <div className="container-fluid">
-                <Link to = "/" style={{textDecoration: "none"}} >
-                <div className="navbar-brand fw-bold web-name d-flex align-items-center">
-                    <img className="web-icon" src = "https://i.pinimg.com/564x/b4/c4/84/b4c484a289f0b065b471f13275be917a.jpg" />
-                  AnimePlay</div>
-                </Link>
-            </div>
-        </nav> */}
         <UsersInfo.Provider value = {{users:users,setUsers:setUsers}} >
              <DetailContainer data = {anime} /> 
              <Trailer data = {anime} />

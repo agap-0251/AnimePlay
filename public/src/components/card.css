@@ -23,7 +23,6 @@
 .card-content1:hover {
   opacity: 0.7;
   background: linear-gradient(to right, #000, #333);
-  /* filter: opacity(0.7); */
   cursor: pointer;
 }
 

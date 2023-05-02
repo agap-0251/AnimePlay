@@ -9,11 +9,9 @@ import {
 } from "react-icons/fa";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { getWatchList,addToList } from "../api/userInfo";
-import { setWatchId,removeWatchItem } from "../api/userInfo";
+import { removeWatchItem } from "../api/userInfo";
 import { useNavigate } from "react-router-dom";
 import { UsersInfo } from "../pages/AnimeDetailPage";
-import { add } from "lodash";
-import { getAnimeReviews } from "../api/api";
 
 const DetailCard = ({ cardDetails }) => {
   return (
@@ -117,20 +115,6 @@ const ButtonGroup = ({ id,list,users }) => {
         Add to List
       </button>
         }
-        {/* <button
-        onClick={() => {
-          setTimeout(() => {
-            setWatchId(id);
-          }, 2000);
-        }}
-        className="group-btn text-white bg-dark"
-      >
-        
-        <span className="add1">
-          <IoIosAddCircleOutline />
-        </span>
-        Add to List
-      </button> */}
         
       </div>
       <div className="share-btn d-flex gap-2 align-items-center">

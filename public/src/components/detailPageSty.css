@@ -157,11 +157,9 @@ body {
 }
 
 .anime-characters {
-   /* border: 2px solid teal; */
 }
 
 .char-img-name-wrapper {
-    /* border: 2px solid hotpink; */
     margin: 0 0.2rem;
 }
 
@@ -181,7 +179,6 @@ body {
 
 .trailer-container {
     width: 100%;
-    /* border: 2px solid hotpink; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
