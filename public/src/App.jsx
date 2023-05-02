@@ -20,6 +20,10 @@ function App({}) {
   
  useEffect(()=>{
   localStorage.setItem("currentUser",JSON.stringify(userInfo))
+  if(userInfo === null) {
+    localStorage.setItem("currentUser",JSON.stringify(""))
+    setUserInfo("")
+  }
 
  },[userInfo])
 
