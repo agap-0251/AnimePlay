@@ -27,7 +27,13 @@ const NavButtonGroup = () => {
         style={{ textDecoration: "none", width: "100%" }}
         to={`/animeDetail/${randAnimeId}`}
       >
-        <button className="nav-btns ">
+        <button className="nav-btns "
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-label="Toggle navigation"
+        >
           <FaRandom style={{ blockSize: "12px", margin: "5px 5px 0 0" }} />
           Random
         </button>
@@ -36,7 +42,13 @@ const NavButtonGroup = () => {
         to={`/watchList`}
         style={{ textDecoration: "none", width: "100%"  }}
       >
-        <button className="nav-btns">
+        <button className="nav-btns"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-label="Toggle navigation"
+        >
           <span className="add">
             <IoIosAddCircleOutline />
           </span>
@@ -47,7 +59,13 @@ const NavButtonGroup = () => {
         to={`/srchResult`}
         style={{ textDecoration: "none", width: "100%"  }}
       >
-        <button className="nav-btns d-flex align-items-center">
+        <button className="nav-btns d-flex align-items-center"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-label="Toggle navigation"
+        >
           <span className="add">
             <FaSearch />
           </span>
@@ -58,7 +76,13 @@ const NavButtonGroup = () => {
          to={`/loginPage`}
          style={{ textDecoration: "none", width: "100%"  }}
       >
-        <button className="nav-btns d-flex align-items-center">
+        <button className="nav-btns d-flex align-items-center"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-label="Toggle navigation"
+        >
           <span className="add">
             <BiLogInCircle />
           </span>
