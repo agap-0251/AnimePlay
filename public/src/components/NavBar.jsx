@@ -7,7 +7,7 @@ import { IoIosAddCircleOutline } from "react-icons/io";
 import { BiLogInCircle } from "react-icons/bi";
 import { UsersProvider } from "../App";
 
-const NavButtonGroup = () => {
+const NavButtonGroup = ({shrink}) => {
   const [randAnimeId, setRandAnimeId] = useState();
   const {users,setUsers} = useContext(UsersProvider)
 
@@ -23,13 +23,13 @@ const NavButtonGroup = () => {
 
   return (
     <section className="d-flex name">
-      <Link
+      {shrink ? <><Link
         style={{ textDecoration: "none", width: "100%" }}
         to={`/animeDetail/${randAnimeId}`}
       >
         <button className="nav-btns "
           type="button"
-          data-bs-toggle="collapse"
+          data-bs-toggle= "collapse"
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-label="Toggle navigation"
@@ -91,6 +91,11 @@ const NavButtonGroup = () => {
       </Link>
       :
       <button className="nav-btns d-flex align-items-center"
+      type="button"
+      data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-label="Toggle navigation"
       onClick={() => setUsers("")}>
           <span className="add">
             <BiLogInCircle />
@@ -99,13 +104,81 @@ const NavButtonGroup = () => {
         </button>
       }
       
+      </>
+      
+    :
+    <>
+    <Link
+        style={{ textDecoration: "none", width: "100%" }}
+        to={`/animeDetail/${randAnimeId}`}
+      >
+        <button className="nav-btns "
+          type="button"
+        >
+          <FaRandom style={{ blockSize: "12px", margin: "5px 5px 0 0" }} />
+          Random
+        </button>
+      </Link>
+      <Link
+        to={`/watchList`}
+        style={{ textDecoration: "none", width: "100%"  }}
+      >
+        <button className="nav-btns"
+        type="button"
+
+        >
+          <span className="add">
+            <IoIosAddCircleOutline />
+          </span>
+          WatchList
+        </button>
+      </Link>
+   <Link
+        to={`/srchResult`}
+        style={{ textDecoration: "none", width: "100%"  }}
+      >
+        <button className="nav-btns d-flex align-items-center"
+          type="button"
+        >
+          <span className="add">
+            <FaSearch />
+          </span>
+          Search
+        </button>
+      </Link>
+
+      {(users === '')?<Link
+         to={`/loginPage`}
+         style={{ textDecoration: "none", width: "100%"  }}
+      >
+        <button className="nav-btns d-flex align-items-center"
+        type="button"
+        >
+          <span className="add">
+            <BiLogInCircle />
+          </span>
+          SignIn
+        </button>
+      </Link>
+      :
+      <button className="nav-btns d-flex align-items-center"
+      onClick={() => setUsers("")}>
+          <span className="add">
+            <BiLogInCircle />
+          </span>
+          SignOut
+        </button>
+      }
+      </>
+}
+      
     
     </section>
   );
 };
 
 const NavBar = () => {
-  const [srchValue, setSrchValue] = useState("");
+  const [toggle, setToggle] = useState();
   const [showSearch, setShowSearch] = useState(true)
 
   useEffect(()=> {
@@ -115,14 +188,16 @@ const NavBar = () => {
         setShowSearch(false)
       else
         setShowSearch(true)
+      if(winWidth < 768) {
+        setToggle(true)
+      }
+      else {
+        setToggle(false)
+      }
 
         
     })
   },[])
-
-  function handleSubmit(e) {
-    e.preventDefault();
-  }
 
   return (
     <nav className="navbar navbar-expand-md show-top-nav navbar-dark">
@@ -153,7 +228,7 @@ const NavBar = () => {
           id="navbarSupportedContent"
         >
           <div className="nav-item d-flex align-items-center name">
-            <NavButtonGroup />
+            <NavButtonGroup shrink = {toggle} />
           </div>
 
 
