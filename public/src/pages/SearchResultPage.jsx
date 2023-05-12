@@ -21,7 +21,9 @@ const SearchResultPage = () => {
     const [srchList, setSrchList] = useState()
     const [srchValue, setSrchValue] = useState("")
     const [isLoading, setIsLoading] = useState(true)
-
+    
+    const debouncedFunc = useCallback(debounce(val => getDetails(val),350),[])
+    
      async function getDetails(val){
       setIsLoading(true)
             if(val) {
@@ -31,7 +33,6 @@ const SearchResultPage = () => {
             }
     }
 
-    const debouncedFunc = useCallback(debounce(val => getDetails(val),350),[])
   
     function handleChange(e) {
         setSrchValue(e.target.value);

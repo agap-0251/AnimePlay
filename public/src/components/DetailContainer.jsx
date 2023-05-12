@@ -111,8 +111,8 @@ const ButtonGroup = ({ id,list,users }) => {
         {isAdded?
         <button 
         onClick={() => {
-            removeWatchItem(users,id);
-            watchListToast(id.title_japanese,false)
+          (users != '') && removeWatchItem(users,id);
+            (users != '') && watchListToast(id.title_japanese,false)
             navigate("/watchList")
         }}
         
@@ -121,7 +121,7 @@ const ButtonGroup = ({ id,list,users }) => {
         onClick={() => {
 
              (users != '') && addToList(users,id);
-             watchListToast(id?.title_english ||id?.title || id?.title_japanese,true)
+             (users != '') && watchListToast(id?.title_english ||id?.title || id?.title_japanese,true)
              navigate("/watchList")
         }}
         className="group-btn text-white bg-dark"

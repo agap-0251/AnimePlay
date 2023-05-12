@@ -30,7 +30,7 @@ const LoginPage = () => {
     <div className="login-wrapper">
       <form className="form-container" action="#">
         <div className="form-group">
-          <label htmlFor="exampleInputUsername1">Username address</label>
+          <label htmlFor="exampleInputUsername1" className="text-muted">Username address</label>
           <input
             type="text"
             className="form-control"

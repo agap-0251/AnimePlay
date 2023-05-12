@@ -38,12 +38,20 @@ const WatchListPage = () => {
   const [watchArr, setWatchArr] = useState([]);
   const {users,setUsers} = useContext(UsersProvider)
   
+  // if(users === '')
+  //   return <h1>SignIn to use Watch List feature</h1>
+  useEffect(() => {
+    if(users !== '') {
+      const list = getWatchList(users);
+      setWatchArr(list)
+    }
+    else {
+      setWatchArr([])
+    }
+  }, []);
+
   if(users === '')
     return <h1>SignIn to use Watch List feature</h1>
-  useEffect(() => {
-    const list = getWatchList(users);
-    setWatchArr(list)
-  }, []);
 
   return (
     <div className="container WatchList-wrapper  text-white d-flex flex-column ">
