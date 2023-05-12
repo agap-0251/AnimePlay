@@ -6,6 +6,7 @@ import { getRandomData } from "../api/api";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { BiLogInCircle } from "react-icons/bi";
 import { UsersProvider } from "../App";
+import {toast} from 'react-toastify'
 
 const NavButtonGroup = ({shrink}) => {
   const [randAnimeId, setRandAnimeId] = useState();
@@ -18,6 +19,7 @@ const NavButtonGroup = ({shrink}) => {
     }
 
     getDetails();
+    // toast("wow its working");
     return setRandAnimeId();
   }, []);
 

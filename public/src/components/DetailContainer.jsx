@@ -13,6 +13,7 @@ import { removeWatchItem } from "../api/userInfo";
 import { useNavigate } from "react-router-dom";
 import { UsersInfo } from "../pages/AnimeDetailPage";
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
+import { watchListToast } from "./toastMsg";
 import "./card.css"
 
 const SkeletonData = () => {
@@ -111,6 +112,7 @@ const ButtonGroup = ({ id,list,users }) => {
         <button 
         onClick={() => {
             removeWatchItem(users,id);
+            watchListToast(id.title_japanese,false)
             navigate("/watchList")
         }}
         
@@ -119,6 +121,7 @@ const ButtonGroup = ({ id,list,users }) => {
         onClick={() => {
 
              (users != '') && addToList(users,id);
+             watchListToast(id?.title_english ||id?.title || id?.title_japanese,true)
              navigate("/watchList")
         }}
         className="group-btn text-white bg-dark"

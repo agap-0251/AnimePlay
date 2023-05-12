@@ -3,6 +3,7 @@ import "../components/loginpage.css"
 import { UsersProvider } from "../App";
 import { isUserPresent } from "../api/userInfo";
 import { useNavigate } from "react-router-dom";
+import { successToast } from "../components/toastMsg";
 
 const LoginPage = () => {
 
@@ -14,10 +15,12 @@ const LoginPage = () => {
    function handleSubmit() {
     if(isUserPresent(uname,pwd)) {
       setUsers(uname)
+      successToast(uname)
       navigate("/")
     }
     else {
       console.log("Username or password is wrong");
+      // showToast()
     }
     
    }
