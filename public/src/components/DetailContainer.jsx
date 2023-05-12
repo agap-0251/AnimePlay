@@ -12,15 +12,30 @@ import { getWatchList,addToList } from "../api/userInfo";
 import { removeWatchItem } from "../api/userInfo";
 import { useNavigate } from "react-router-dom";
 import { UsersInfo } from "../pages/AnimeDetailPage";
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
+import "./card.css"
+
+const SkeletonData = () => {
+  
+  return (
+    <>  
+      <SkeletonTheme>
+        <div className=" skeleton-card rounded">
+          <Skeleton className="skeleton" />
+        </div>
+      </SkeletonTheme>
+    </>
+  )
+}
 
 const DetailCard = ({ cardDetails }) => {
   return (
     <div className="detail-card d-flex flex-column align-items-center h-100">
-      <img
+      {cardDetails ? <img
         src={cardDetails?.images?.jpg.large_image_url}
         className="card-img-top rounded"
         alt="..."
-      />
+      /> : <SkeletonData /> }
       <button className="manga-btn rounded text-white">Read manga</button>
     </div>
   );

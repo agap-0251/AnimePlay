@@ -1,8 +1,18 @@
-.card-wrapper1 {
+.card-wrapper1,.skeleton-wrapper {
   width: 98%;
   height: 16.5rem;
   background: none;
 
+}
+
+.skeleton-card {
+  width: 98%;
+  height: 16.5rem;
+  min-height: 16.5rem;
+  background: linear-gradient(to bottom right,#333,#9f9d9d,#fff);
+  background-size: 400% 400%;
+  background-repeat: no-repeat;
+  animation: gradient 5s ease-in-out alternate-reverse infinite;
 }
 
 .card-wrapper1 img {
@@ -26,9 +36,35 @@
   cursor: pointer;
 }
 
+@keyframes gradient
+ {
+    0% {
+		background-position: 0% 50%;
+	}
+
+    25% {
+		background-position: 25% 75%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+    75% {
+		background-position: 70% 25%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 @media screen and (max-width: 310px) {
     .card-wrapper1 {
       max-width: 5rem;
+    }
+    .skeleton-wrapper {
+      max-width: 90%;
     }
     .wrapper-img {
       min-height: 10rem;
@@ -61,6 +97,7 @@
         align-items: center;
         justify-content: center;
       }
+    
       .wrapper-img {
         max-width: 85% ;
         min-height: 22rem !important;
@@ -70,7 +107,7 @@
   
 
 @media screen and (max-width: 421px) {
-    .card-wrapper1 {
+    .card-wrapper1,.skeleton-wrapper,.skeleton-card {
         min-width: 95% !important;
         max-width: none;
         min-height: 19rem ;
@@ -83,7 +120,7 @@
 }
 
 @media screen and (max-width: 490px) {
-  .card-wrapper1 {
+  .card-wrapper1,.skeleton-wrapper,.skeleton-card {
     min-width: 6.2rem;
     height: 19rem;
 
@@ -96,7 +133,7 @@
 }
 
 @media screen and (max-width: 520px) {
-  .card-wrapper1,.wrapper-img {
+  .card-wrapper1,.skeleton-wrapper,.skeleton-card,.wrapper-img {
     min-width: 95%;
     max-width: 95% ;
     height: 19rem;
@@ -105,7 +142,7 @@
 
 
 @media screen and (max-width: 704px) {
-    .card-wrapper1 {
+    .card-wrapper1,.skeleton-wrapper,.skeleton-card {
       max-width: 90% ;
       min-width: 90%;
       height: 19rem;
@@ -122,7 +159,7 @@
 }
 
 @media screen and (max-width: 767px) {
-    .card-wrapper1 {
+    .card-wrapper1,.skeleton-wrapper,.skeleton-card {
       width: 19rem;
     }
     .wrapper-img {
@@ -131,7 +168,7 @@
   }
 
 @media screen and (max-width: 840px) {
-  .card-wrapper1 {
+  .card-wrapper1,.skeleton-wrapper,.skeleton-card {
     width: 15rem ;
     height: 19rem;
   }

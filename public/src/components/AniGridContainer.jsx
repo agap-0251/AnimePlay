@@ -3,8 +3,49 @@ import Card from "./Card";
 import { useRef, useEffect, useState } from "react";
 import { register } from "swiper/element/bundle";
 import "./homepage.css"
+import './card.css'
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 
 register();
+
+const ActualData = ({data}) => {
+  return (
+    <>
+    {data &&
+      data.map((animeItem) => (
+        <swiper-slide key={animeItem?.mal_id}>
+          <Link
+            to={`/animeDetail/${animeItem?.mal_id}`}
+            style={{ textDecoration: "none" }}
+          >
+            <Card data={animeItem} />
+          </Link>
+        </swiper-slide>
+      ))}
+    </>
+  )
+}
+
+const SkeletonData = () => {
+  return (
+    <>
+    {Array(10)
+          .fill()
+          .map((item, index) => {
+            return (
+              <swiper-slide key = {index}>
+              <div key={index} >
+                <div className="card skeleton-card">
+                  <Skeleton className="skeleton" />
+                </div>
+              </div>
+              </swiper-slide>
+            )
+          })}
+    </>
+  )
+}
+
 const AniGridContainer = ({ data }) => {
   const swiperElRef = useRef(null);
   const [noOfSlides, setNoOfSlides] = useState(7);
@@ -36,7 +77,7 @@ const AniGridContainer = ({ data }) => {
         pagination="false"
         autoplay="true"
       >
-        {data &&
+        {/* {data &&
           data.map((animeItem) => (
             <swiper-slide key={animeItem?.mal_id}>
               <Link
@@ -46,7 +87,8 @@ const AniGridContainer = ({ data }) => {
                 <Card data={animeItem} />
               </Link>
             </swiper-slide>
-          ))}
+          ))} */}
+          {data.length > 0 ? <ActualData data = {data}/> : <SkeletonData />}
       </swiper-container>
     </div>
   );
