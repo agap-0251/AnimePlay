@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .card-wrapper {
     width: 100%;
@@ -20,6 +25,7 @@
     min-height: 19rem;
     max-width: 12.9rem;
     min-width: 12.9rem;
+    /* border: 2px solid red; */
   
 }
 
@@ -28,6 +34,7 @@
     transition: opacity 0.3s ease-in-out;
     max-width: 12.9rem;
     min-width: 12.9rem;
+    
 }
 
 .card-content:hover {
@@ -86,6 +93,11 @@
         max-width: 12.5rem;
         min-width: 12.5rem;
     }
+    .card-wrapper {
+        max-width: 12.5rem;
+        min-width: 12.5rem;
+    }
+    
 }
 
 @media screen and (max-width: 469px) {

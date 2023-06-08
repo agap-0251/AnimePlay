@@ -12,8 +12,9 @@ const SrchListContainer = ({arr}) => {
         return <h1 style={{color: "white"}}>Sorry no results are found ...</h1>
     return (
         <div className="container srchList-container">
-            {arr && arr.map(anime => {if(anime.rank) return <Link style={{maxHeight: "19rem",marginBottom: "3px"}} key = {anime.mal_id} to={`/animeDetail/${anime.mal_id}`} ><SrchCard data = {anime} /></Link>})}
+            {arr && arr.map(anime => {if(anime.rank) return <Link style={{maxHeight: "19rem",marginBottom: "3px"}} className="link-style" key = {anime.mal_id} to={`/animeDetail/${anime.mal_id}`} ><SrchCard data = {anime} /></Link>})}
         </div>
+
     )
 }
 

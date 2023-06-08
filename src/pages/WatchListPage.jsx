@@ -54,7 +54,7 @@ const WatchListPage = () => {
     return <h1>SignIn to use Watch List feature</h1>
 
   return (
-    <div className="container WatchList-wrapper  text-white d-flex flex-column ">
+    <div className="container watchList-wrapper  text-white d-flex flex-column ">
       
       <h1 style={{ color: "rgb(68, 183, 83)" }}> WatchListPage</h1>
       <WatchListContainer arr = {watchArr} />

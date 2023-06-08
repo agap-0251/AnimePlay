@@ -1,11 +1,11 @@
 
 .srchList-container,.watchList-container {
-     display: flex;
+    display: flex;
     justify-content: flex-start;
     gap: 0.6rem;
     flex-wrap: wrap; 
     padding-top: 1rem;
-    min-height: calc(100vh - 2rem);
+    height: 100%;
     margin-bottom: 0.5rem;
     max-width: 80%;
 }
