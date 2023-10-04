@@ -40,7 +40,7 @@ const Slide = ({data}) => {
             <div className='airing-anime-synopsis fs-5 fw-bold d-flex '>
             <h3 className='slider-header'>{data.title_english || data.title}</h3>
                 <h5 className='text-white'>Synopsis</h5>
-                <span className='text-white fw-normal small-text small-syn-text'>{wordLimit?`${data?.synopsis.slice(0,100)}`:`${data?.synopsis.slice(0,500)}`}...</span>
+                <span className='text-white fw-normal small-text small-syn-text'>{wordLimit?`${data?.synopsis?.slice(0,100)}`:`${data?.synopsis?.slice(0,500)}`}...</span>
                 {!left && 
                 <div className="d-flex justify-content-evenly align-items-center slide-right">
                 {data.type && <p className='d-flex align-items-center fw-bold'> <FaRegPlayCircle style={{marginRight: "3px"}} /> {data.type}</p>}
