@@ -23,7 +23,7 @@ const Slide = ({data}) => {
   },[])
 
 
-    const temp = data.duration.slice(0,data.duration.indexOf("min")+3);
+    //const temp = data.duration.slice(0,data.duration.indexOf("min")+3);
     return (
         <div className='slide d-flex text-white align-items-center'>
             <div className="slide-left">
