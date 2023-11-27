@@ -51,7 +51,7 @@ const WatchListPage = () => {
   }, []);
 
   if(users === '')
-    return <h1>SignIn to use Watch List feature</h1>
+    return <h1 style={{color : "white"}}>SignIn to use Watch List feature</h1>
 
   return (
     <div className="container watchList-wrapper  text-white d-flex flex-column ">
